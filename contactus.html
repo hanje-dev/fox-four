@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>neusmart--contactus</title>
+<link href="style/bootstrap.min.css" rel="stylesheet">
+<style>
+	body{padding: 50px 0 60px;}
+	.header a.logo{font-size: 30px;color:#fff;outline: none;font-weight: bold;}
+	.header .navbar-ex1-collapse ul li a{color: #cfcfcf;text-shadow: 2px 2px 2px #000;outline: none;}
+	.header .navbar-ex1-collapse ul li a:hover{color: #22a3dc;}
+	
+	/*contactus area*/
+	.contactus{margin-top: 30px;}
+	.contactus .row1 h4{font-size: 24px;}
+	.contactus .row1 h4 img{position: relative;top: -2px;}
+
+	.contactus .row2 .col-sm-4{padding: 30px 40px;}
+	.contactus .row2 .col-sm-4 hr{border-color:#fff;}
+	.contactus .row2 .col-sm-4 p{height: 100px;color: #828282;}
+	.contactus .row2 .col-sm-4 p span{font-size: 22px;color: #000;}
+	.contactus .row2 .email,.contactus .row2 .phone,.contactus .row2 .mail_address{padding-top: 20px;background: #f4f4f4;text-align: center;}
+	
+	/*baimap area*/
+	.baimap{padding:0 40px;}
+	.baimap section{border: 1px solid #ccc;}
+
+	#container{width: 100%;height: 500px;border: 4px solid #fff;}
+
+	/*footer area*/
+	.footer{position: fixed;left: 0;bottom: 0;background: #000;width: 100%;text-align: center;padding-top: 10px;}
+	.footer p.copyright a{color:#fff;outline: none;text-decoration: none;}
+</style>
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top header" role="navigation">
+ 		<div class="container">
+ 			<div class="navbar-header">
+ 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+ 				<span class="sr-only">Toggle navigation</span>
+ 				<span class="icon-bar"></span>
+ 				<span class="icon-bar"></span>
+ 				<span class="icon-bar"></span>
+ 				</button>
+ 				<a href="javascript:;" class="navbar-brand logo">NEUSMART</a>
+ 			</div>
+ 			<!-- Collect the nav links, forms, and other content for toggling -->
+ 			<div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
+ 				<ul class="nav navbar-nav">
+ 					<li><a href="solutions.html">Solution</a></li>
+					<li><a href="services.html">Services</a></li>
+					<li><a href="team.html">Team</a></li>
+ 					<li><a href="contactus.html" style="background:#000;color:#22a3dc;">Contact us</a></li>
+ 				</ul>
+ 			</div>
+ 			<!-- /.navbar-collapse -->
+ 		</div>
+ 	</nav> <!--  End nav -->
+ 	
+	<div class="container contactus">
+		<div class="row row1">
+ 			<div class="col-sm-12">
+ 				<h4><img src="images/solutions/ic_triangle.png" alt=""> Feel free to contact us by any method below</h4>
+ 			</div>
+ 		</div>	
+ 		<div class="row row2">
+ 			<div class="col-sm-4">
+ 				<div class="email">
+ 					<img src="images/contactus/ic_01.png" alt="">
+ 					<hr>
+ 					<p><span>Email:</span> <br>marketing@neusmart.com</p>
+ 				</div>
+ 			</div>
+ 			<div class="col-sm-4">
+ 				<div class="phone">
+ 					<img src="images/contactus/ic_02.png" alt="">
+ 					<hr>
+ 					<p><span>Phone:</span> <br>86-18930843026</p>
+ 				</div>
+ 			</div>
+ 			<div class="col-sm-4">
+ 				<div class="mail_address">
+ 					<img src="images/contactus/ic_03.png" alt="">
+ 					<hr>
+ 					<p><span>Mailing Address:</span><br>Room 603, Lane 805,<br>Road Songhong Shanghai <br>China</p>
+ 				</div>
+ 			</div> 			
+ 		</div>
+ 		<hr>
+	</div> <!-- End container contactus -->
+
+	<div class="container baimap">
+		<section>
+			<div id="container"></div>
+		</section>
+	</div>
+
+	<div class="footer">
+		<p class="copyright"><a href="javascript:;">Copyright © 2014 neusmart.Inc.All right reserved</a></p>
+	</div> <!--  End footer -->
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.5&ak=1HDRINv5TP5n8Yskom5EpFf7"></script>
+<script>
+	$(function  () {
+		var map = new BMap.Map("container");          // 创建地图实例  
+    	var point = new BMap.Point(121.367879,31.230551);  // 创建点坐标  
+    	map.centerAndZoom(point, 20);                 // 初始化地图，设置中心点坐标和地图缩放级别  	
+    	map.enableScrollWheelZoom();
+	})
+</script>
+</body>
+</html>
